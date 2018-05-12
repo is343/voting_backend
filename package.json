@@ -27,10 +27,5 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
-<<<<<<< HEAD
+    }
   }
-=======
-  },
-  "proxy": "https://fcc-voting-backend.herokuapp.com"
->>>>>>> 201d87d485f82d182e62941c2e597cc04ca431dd
-}
