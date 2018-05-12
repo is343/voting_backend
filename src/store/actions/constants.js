@@ -1,0 +1,49 @@
+//////////
+// AUTH //
+//////////
+export const LOGIN = "LOGIN";
+export const LOGIN_FULFILLED = "LOGIN_FULFILLED";
+export const LOGIN_REJECTED = "LOGIN_REJECTED";
+export const SIGNUP = "SIGNUP";
+export const SIGNUP_FULFILLED = "SIGNUP_FULFILLED";
+export const SIGNUP_REJECTED = "SIGNUP_REJECTED";
+export const LOGOUT = "LOGOUT";
+export const ALERT_CLOSE = "ALERT_CLOSE";
+export const LOGIN_BOX_OPEN = "LOGIN_BOX_OPEN";
+export const LOGIN_BOX_CLOSE = "LOGIN_BOX_CLOSE";
+export const VOTE_BOX_OPEN = "VOTE_BOX_OPEN";
+export const VOTE_BOX_CLOSE = "VOTE_BOX_CLOSE";
+export const EDIT_BOX_OPEN = "EDIT_BOX_OPEN";
+export const EDIT_BOX_CLOSE = "EDIT_BOX_CLOSE";
+export const SIGNUP_BOX_OPEN = "SIGNUP_BOX_OPEN";
+export const SIGNUP_BOX_CLOSE = "SIGNUP_BOX_CLOSE";
+export const SNACKBAR_OPEN = "SNACKBAR_OPEN";
+export const SNACKBAR_CLOSE = "SNACKBAR_CLOSE";
+export const REQUEST_REJECTED = "REQUEST_REJECTED";
+
+///////////
+// POLLS //
+///////////
+export const GET_POLLS = "GET_POLLS";
+export const GET_POLLS_FULFILLED = "GET_POLLS_FULFILLED";
+export const GET_POLLS_REJECTED = "GET_POLLS_REJECTED";
+export const GET_ONE_POLL = "GET_ONE_POLL";
+export const GET_ONE_POLL_FULFILLED = "GET_ONE_POLL_FULFILLED";
+export const GET_ONE_POLL_REJECTED = "GET_ONE_POLL_REJECTED";
+export const CREATE_POLL = "CREATE_POLL";
+export const CREATE_POLL_FULFILLED = "CREATE_POLL_FULFILLED";
+export const CREATE_POLL_REJECTED = "CREATE_POLL_REJECTED";
+export const DELETE_POLL = "DELETE_POLL";
+export const DELETE_POLL_FULFILLED = "DELETE_POLL_FULFILLED";
+export const DELETE_POLL_REJECTED = "DELETE_POLL_REJECTED";
+export const VOTE_ON_POLL = "VOTE_ON_POLL";
+export const VOTE_ON_POLL_FULFILLED = "VOTE_ON_POLL_FULFILLED";
+export const VOTE_ON_POLL_REJECTED = "VOTE_ON_POLL_REJECTED";
+
+///////////
+// USERS //
+///////////
+export const UPDATE_USER = "UPDATE_USER";
+export const GET_USER_INFO = "GET_USER_INFO";
+export const GET_USER_INFO_FULFILLED = "GET_USER_INFO_FULFILLED";
+export const GET_USER_INFO_REJECTED = "GET_USER_INFO_REJECTED";
