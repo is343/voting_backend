@@ -11,13 +11,13 @@ import axios from "axios";
 import { history } from "../../store";
 
 export const getPolls = () => dispatch => {
-  const url = "/api/polls";
+  const url = "https://fcc-voting-backend.herokuapp.com/api/polls";
   const request = axios.get(url);
   return dispatch({ type: GET_POLLS, payload: request });
 };
 
 export const getOnePoll = pollId => dispatch => {
-  const url = "/api/poll/" + pollId; // for some reason, if I axios.get with a string litteral it becomes `/poll/api/poll/${pollId}`
+  const url = "https://fcc-voting-backend.herokuapp.com/api/poll/" + pollId; // for some reason, if I axios.get with a string litteral it becomes `/poll/api/poll/${pollId}`
   const request = axios.get(url);
   return dispatch({
     type: GET_ONE_POLL,
@@ -26,7 +26,7 @@ export const getOnePoll = pollId => dispatch => {
 };
 
 export const createPoll = pollData => dispatch => {
-  const url = "/api/poll";
+  const url = "https://fcc-voting-backend.herokuapp.com/api/poll";
   const token = localStorage.getItem("token");
   axios
     .post(url, pollData, {
@@ -45,7 +45,7 @@ export const createPoll = pollData => dispatch => {
 };
 
 export const deletePoll = pollId => dispatch => {
-  let url = "/api/poll/" + pollId; // for some reason, if I axios.get with a string litteral it becomes `/poll/api/poll/${pollId}`
+  let url = "https://fcc-voting-backend.herokuapp.com/api/poll/" + pollId; // for some reason, if I axios.get with a string litteral it becomes `/poll/api/poll/${pollId}`
   const token = localStorage.getItem("token");
   axios
     .delete(url, {
@@ -54,7 +54,7 @@ export const deletePoll = pollId => dispatch => {
     })
     .then(res => {
       dispatch({ type: SNACKBAR_OPEN, payload: res });
-      url = "/api/polls";
+      url = "https://fcc-voting-backend.herokuapp.com/api/polls";
       const allPollsRequest = axios.get(url);
       return dispatch({ type: GET_POLLS, payload: allPollsRequest });
     })
@@ -67,7 +67,7 @@ export const deletePoll = pollId => dispatch => {
 };
 
 export const updatePoll = pollData => dispatch => {
-  const url = "/api/poll";
+  const url = "https://fcc-voting-backend.herokuapp.com/api/poll";
   const token = localStorage.getItem("token");
   axios
     .post(url, pollData, {
@@ -86,14 +86,14 @@ export const updatePoll = pollData => dispatch => {
 };
 
 export const voteOnPoll = (votingData, pollId) => dispatch => {
-  let url = "/api/poll/" + pollId; // for some reason, if I axios.get with a string litteral it becomes `/poll/api/poll/${pollId}`
+  let url = "https://fcc-voting-backend.herokuapp.com/api/poll/" + pollId; // for some reason, if I axios.get with a string litteral it becomes `/poll/api/poll/${pollId}`
   axios
     .post(url, votingData)
     .then(res => {
       dispatch({ type: SNACKBAR_OPEN, payload: res });
       const onePollRequest = axios.get(url);
       dispatch({ type: GET_ONE_POLL, payload: onePollRequest });
-      url = "/api/polls";
+      url = "https://fcc-voting-backend.herokuapp.com/api/polls";
       const allPollsRequest = axios.get(url);
       return dispatch({ type: GET_POLLS, payload: allPollsRequest });
     })

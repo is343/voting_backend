@@ -19,19 +19,25 @@ import axios from "axios";
 import { history } from "../../store";
 
 export function login(username, password) {
-  const request = axios.post("/api/auth/login", {
-    username,
-    password
-  });
+  const request = axios.post(
+    "https://fcc-voting-backend.herokuapp.com/api/auth/login",
+    {
+      username,
+      password
+    }
+  );
   return { type: LOGIN, payload: request };
 }
 
 export function signup(username, password) {
   history.push("/poll");
-  const request = axios.post("/api/auth/signup", {
-    username,
-    password
-  });
+  const request = axios.post(
+    "https://fcc-voting-backend.herokuapp.com/api/auth/signup",
+    {
+      username,
+      password
+    }
+  );
   return { type: SIGNUP, payload: request };
 }
 
